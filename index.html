@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK - Моят профил</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome за икони -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигационна лента -->
+    <header class="vk-header">
+        <div class="header-container">
+            <div class="logo-search">
+                <div class="vk-logo"><i class="fa-brands fa-vk"></i></div>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Търсене...">
+                </div>
+            </div>
+            <div class="header-nav">
+                <i class="fa-solid fa-bell icon-btn"></i>
+                <i class="fa-solid fa-moon icon-btn" id="theme-toggle"></i>
+                <div class="user-mini-profile">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Профил">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основно съдържание -->
+    <main class="vk-main">
+        <!-- Ляво меню -->
+        <aside class="sidebar">
+            <ul>
+                <li class="active"><i class="fa-solid fa-user"></i> Моята страница</li>
+                <li><i class="fa-solid fa-newspaper"></i> Новини</li>
+                <li><i class="fa-solid fa-message"></i> Съобщения</li>
+                <li><i class="fa-solid fa-user-group"></i> Приятели</li>
+                <li><i class="fa-solid fa-music"></i> Музика</li>
+                <li><i class="fa-solid fa-video"></i> Видео</li>
+            </ul>
+        </aside>
+
+        <!-- Централен фуд/профил -->
+        <section class="content-feed">
+            <!-- Профилен хедър -->
+            <div class="profile-card">
+                <div class="cover-photo"></div>
+                <div class="profile-info-section">
+                    <div class="avatar-container">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Аватар">
+                    </div>
+                    <div class="profile-details">
+                        <h1>Йоан Иванов</h1>
+                        <p class="status">Код, кафе и уеб разработка 💻✨</p>
+                        <button class="edit-profile-btn">Редактиране на профила</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Поле за нова публикация -->
+            <div class="create-post-card">
+                <input type="text" placeholder="Какво ново, Йоан?">
+                <button class="post-btn">Публикувай</button>
+            </div>
+
+            <!-- Примерна публикация -->
+            <div class="post-card">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Аватар">
+                    <div>
+                        <h4>Йоан Иванов</h4>
+                        <span class="post-time">преди 2 часа</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Здравейте! Това е моят нов сайт, създаден специално за Vercel и качен през GitHub. Работи перфектно! 🚀</p>
+                </div>
+                <div class="post-footer">
+                    <span><i class="fa-regular fa-heart"></i> 15</span>
+                    <span><i class="fa-regular fa-comment"></i> 3</span>
+                    <span><i class="fa-solid fa-share"></i> Сподели</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Превключване на тъмна/светла тема
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
